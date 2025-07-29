@@ -1,0 +1,65 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>Confirm Your Email</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+  {{> styles}}
+  </head>
+  <body>
+    <div class='email-container'>
+      <div class='content-wrapper'>
+        <div class='content'>
+          <div class='main-content'>
+            <!-- Logo -->
+            <div class='logo-wrapper'>
+              <img src='{{LOGO_URL}}' alt='Tumbleweed' class='logo' />
+            </div>
+            <!-- Main Content -->
+            <div class='text-content'>
+                <div class="h1">
+                    More than just a             
+                    <svg width="172" height="44" viewBox="0 0 172 44" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="172" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#C9FFC4"/>
+                            <stop offset="45%" stop-color="#47BE00"/>
+                            <stop offset="90%" stop-color="#0E2C00"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="43" width="172" height="44" font-family="Arial, sans-serif" font-size="36" fill="url(#gradient)">marketing</text>
+                    </svg> 
+                    tool.
+                </div>
+                <div class='body-text'>
+                    Craft campaigns with confidence. Enhance your posts with eye-catching content, explore ready-made templates, or create your own. 
+                    With Tumbleweed, the only limit is your imagination.
+                </div>
+                <a href='{{VERIFY_LINK}}' class='button button-primary'>
+                    Verify Your Email
+                </a>
+                <div class='body-text'>
+                    From AI-driven insights to easy-to-follow guides, everything you need to power your next project is just a click away.
+                </div>
+                <a href='{{VERIFY_LINK}}' class='button button-secondary'>
+                    Verify Your Email
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {{> footer2}}
+
+    </div>
+  </body>
+</html>
