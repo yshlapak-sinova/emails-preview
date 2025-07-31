@@ -3,7 +3,7 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <title>Confirm Your Email</title>
+    <title>Welcome to Tumbleweed</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -16,108 +16,99 @@
   {{> styles}}
   </head>
   <body>
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 798px; margin: 20px auto; background: #ffffff; border-radius: 40px; box-shadow: 2px 0px 14px rgba(109, 109, 109, 0.17); overflow: hidden;">
-      <tr>
-        <td style="padding: 44px 44px 0 44px;">
-          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 710px;">
-            <tr>
-              <td style="text-align: center;">
-                {{> logo}}
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="42" style="font-size: 1px; line-height: 42px;">&nbsp;</td>
-            </tr>
-            
-            <!-- Main Content -->
-            <tr>
-              <td style="text-align: left;">
-                <div class="h1">
-                    More than just a             
-                    <svg width="172" height="44" viewBox="0 0 172 44" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="gradient" x1="0" y1="0" x2="172" y2="0" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#C9FFC4"/>
-                            <stop offset="45%" stop-color="#47BE00"/>
-                            <stop offset="90%" stop-color="#0E2C00"/>
-                        </linearGradient>
-                    </defs>
-                    <text x="0" y="43" width="172" height="44" font-family="Arial, sans-serif" font-size="36" fill="url(#gradient)">marketing</text>
-                    </svg> 
-                    tool.
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: left;">
-                <div class='body-text'>
-                    Craft campaigns with confidence. Enhance your posts with eye-catching content, explore ready-made templates, or create your own. 
-                    With Tumbleweed, the only limit is your imagination.
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: center;">
-                <a href='{{VERIFY_LINK}}' class='button button-primary' style="display: inline-block; padding: 8px 16px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 600; line-height: 24px; letter-spacing: -0.5%; width: 240px; height: 40px; background: #F28C28; color: #ffffff; border-radius: 6px;">
-                    Verify Your Email
-                </a>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="40" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: left;">
-                <div class='body-text'>
-                    From AI-driven insights to easy-to-follow guides, everything you need to power your next project is just a click away.
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: center;">
-                <a href='{{VERIFY_LINK}}' class='button button-secondary' style="display: inline-block; padding: 8px 16px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 600; line-height: 24px; letter-spacing: -0.5%; width: 240px; height: 40px; background: #ffffff; color: #F28C28; border: 1px solid #F28C28; border-radius: 6px;">
-                    Verify Your Email
-                </a>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-            </tr>
-          </table>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" class="email-container">
+      <!-- Logo Section -->
+      {{> logo}}
+      
+      
+      <tr class="spacer-lg">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <!-- Main Content -->
+      <tr class="content-wrapper">
+        <td class="h1">
+            More than just a
+            <svg class="mobile" width="116" height="33" viewBox="0 0 172 44" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gradient-mobile" x1="0" y1="0" x2="172" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#C9FFC4"/>
+                      <stop offset="45%" stop-color="#47BE00"/>
+                      <stop offset="90%" stop-color="#0E2C00"/>
+                  </linearGradient>
+              </defs>
+              <text x="0" y="46" width="172" height="44" font-family="Arial, sans-serif" font-size="36" fill="url(#gradient-mobile)">marketing</text>
+            </svg>
+            <svg class="desktop" width="172" height="44" viewBox="0 0 172 44" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                  <linearGradient id="gradient-desktop" x1="0" y1="0" x2="172" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#C9FFC4"/>
+                      <stop offset="45%" stop-color="#47BE00"/>
+                      <stop offset="90%" stop-color="#0E2C00"/>
+                  </linearGradient>
+              </defs>
+              <text x="0" y="43" width="172" height="44" font-family="Arial, sans-serif" font-size="36" fill="url(#gradient-desktop)">marketing</text>
+            </svg>
+            tool.
         </td>
       </tr>
       
-      <!-- Footer -->
-      <tr>
-        <td style="padding: 0;">
-          {{> footer2}}
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class="body-text">
+              Craft campaigns with confidence. Enhance your posts with eye-catching content, explore ready-made templates, or create your own. 
+              With Tumbleweed, the only limit is your imagination.
+          </div>
         </td>
       </tr>
+      
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class="u-block">
+          <a href='{{VERIFY_LINK}}' class='button button-primary'>
+              Verify Your Email
+          </a>
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-md">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class="body-text">
+              From AI-driven insights to easy-to-follow guides, everything you need to power your next project is just a click away.
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class="u-block">
+          <a href='{{VERIFY_LINK}}' class='button button-secondary'>
+              Verify Your Email
+          </a>
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-md">
+        <td>&nbsp;</td>
+      </tr>
+      
+      {{> footers/welcome-email-footer}}
 
     </table>
   </body>

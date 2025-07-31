@@ -19,43 +19,30 @@
         -ms-text-size-adjust: 100%;
     }
 
-    /* Container Layout - Desktop (default) */
+    /* Container Layout - Desktop (default) */    
     .email-container {
-        width: 798px;
-        max-width: 90%;
+        width: 100%;
+        max-width: 798px;
         background: #ffffff;
         border-radius: 40px;
         box-shadow: 2px 0px 14px rgba(109, 109, 109, 0.17);
         overflow: hidden;
         margin: 20px auto;
-        /* Email compatibility: use table-based layout */
         display: block;
     }
 
     .content-wrapper {
-        padding: 44px 44px 0 44px;
-        /* Email compatibility: remove flexbox */
+        padding: 0 44px;
         display: block;
     }
 
-    .content {
-        width: 710px;
-        max-width: 100%;
-        /* Email compatibility: remove flexbox, use block */
-        display: block;
-        padding-bottom: 64px;
-    }
-
-    .main-content {
-        /* Email compatibility: remove flexbox */
-        display: block;
-        text-align: center;
+    .content-wrapper:first-child {
+        padding-top: 44px;
     }
 
     .logo-wrapper {
         height: 42px;
-        padding: 12px 116px;
-        /* Email compatibility: remove flexbox */
+        padding: 12px;
         display: block;
         text-align: center;
     }
@@ -66,14 +53,8 @@
         display: inline-block;
     }
 
-    .text-content {
-        /* Email compatibility: remove flexbox */
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
     .h1 {
+        display: block;
         font-weight: 600;
         font-size: 36px;
         line-height: 44px;
@@ -83,7 +64,16 @@
         overflow: visible;
     }
 
+    svg.desktop {
+        display: inline-block;
+    }
+
+    svg.mobile {
+        display: none;
+    }
+
     .title {
+        display: block;
         font:
             500 24px/32px 'Poppins',
             Arial,
@@ -100,8 +90,6 @@
             sans-serif;
         color: #1c1c1c;
         letter-spacing: -0.12px;
-        width: 178px;
-        height: 58px;
         text-align: left;
     }
 
@@ -112,13 +100,6 @@
             sans-serif;
         color: #1c1c1c;
         text-align: left;
-    }
-
-    .support-section {
-        width: 710px;
-        max-width: 100%;
-        /* Email compatibility: remove flexbox */
-        display: block;
     }
 
     .support-text {
@@ -150,19 +131,16 @@
     
     .button {
         border-radius: 6px;
-        /* Email compatibility: remove flexbox */
-        display: inline-block;
+        display: block;
         text-decoration: none;
         text-align: center;
         font-size: 14px;
         font-weight: 600;
         line-height: 24px;
-        letter-spacing: -0.5%;
         width: 240px;
         height: 40px;
         margin-left: auto;
         margin-right: auto;
-        /* Email compatibility: ensure proper button display */
         padding: 8px 16px;
     }
 
@@ -177,14 +155,65 @@
         border: 1px solid #F28C28;
     }
 
-    .footer {
-        width: 100%;
-        background: #f3f3f3;
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        /* Email compatibility: remove flexbox */
+    .list-item {
+        display: inline-block;
+    }
+
+    .list-item-icon {
+        vertical-align: top;
+        width: 40px;
+        padding-right: 16px;
+    }
+
+    .list-item-icon svg {
         display: block;
-        text-align: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .list-item-text {
+        width: 100%;
+    }
+
+    .list-item-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        margin-bottom: 8px;
+    }
+
+    .list-item-description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0%;
+    }
+
+    .list-item-description a {
+        color: inherit;
+    }
+    
+    .signature {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0%;
+    }
+
+    .footer {
+        display: block;
+        background: #f3f3f3;
+        padding: 0 44px;
+    }
+
+    .footer.first {
+        padding-top: 44px;
+    }
+
+    .footer.last {
+        padding-bottom: 44px;
     }
 
     .footer a {
@@ -192,15 +221,6 @@
         text-decoration: underline;
         font-weight: 600;
     }
-
-    .footer-content {
-        width: 710px;
-        max-width: 100%;
-        /* Email compatibility: remove flexbox */
-        display: block;
-        text-align: center;
-    }
-
     .footer-text {
         font:
             400 14px/20px 'Poppins',
@@ -219,23 +239,40 @@
         letter-spacing: 0.06px;
     }
 
+    .spacer-xl, .spacer-lg, .spacer-md, .spacer-sm, .spacer-xs, .spacer-xxs {
+        font-size: 1px;
+    }
+    .spacer-xl {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .spacer-lg {
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .spacer-md {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .spacer-sm, .spacer-xs {
+        height: 24px;
+        line-height: 24px;
+    }
+
+    .spacer-xxs {
+        height: 12px;
+        line-height: 12px;
+    }
+
     /* Tablet Styles (768px - 1199px) */
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         .email-container {
-            width: 688px;
+            margin: 20px auto;
             border-radius: 20px;
-        }
-
-        .content {
-            width: 600px;
-        }
-
-        .support-section {
-            width: 600px;
-        }
-
-        .footer-content {
-            width: 600px;
+            max-width: 688px;
         }
 
         .body-text {
@@ -245,30 +282,41 @@
         .support-text {
             line-height: 26px;
         }
-
-        .footer {
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+        
+        .list-item-title {
+            font-size: 18px;
+            line-height: 26px;
         }
+
     }
 
     /* Mobile Styles (≤767px) */
     @media screen and (max-width: 767px) {
+        .h1 {
+            text-align: center;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        svg.desktop {
+            display: none;
+        }
+
+        svg.mobile {
+            display: inline-block;
+        }   
         .email-container {
-            width: 288px;
+            width: auto;
             border-radius: 16px;
+            margin: 20px 12px;
         }
 
         .content-wrapper {
-            padding: 16px 12px 0 12px;
+            padding: 0 12px;
         }
 
-        .content {
-            width: 264px;
-        }
-
-        .main-content {
-            /* Email compatibility: remove gap property */
+        .content-wrapper:first-child {
+            padding-top: 16px;
         }
 
         .logo {
@@ -285,6 +333,7 @@
         }
 
         .code {
+            display: block;
             font:
             700 40px/48px 'Poppins',
             Arial,
@@ -301,28 +350,37 @@
             Arial,
             sans-serif;
         }
-
-        .support-section {
-            width: 264px;
-            height: 70px;
-        }
-
         .support-text {
             font:
             400 14px/22px 'Poppins',
             Arial,
             sans-serif;
-            height: 70px;
-            width: 263px;
+        }
+        
+        .list-item-title {
+            font-size: 16px;
+            line-height: 24px;
         }
 
+        .list-item-description {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        
+        .signature {
+            font-size: 12px;
+            line-height: 20px;
+        }
         .footer {
-            border-bottom-left-radius: 16px;
-            border-bottom-right-radius: 16px;
+            padding: 0 12px;
         }
 
-        .footer-content {
-            width: 264px;
+        .footer.first {
+            padding-top: 16px;
+        }
+
+        .footer.last {
+            padding-bottom: 16px;
         }
 
         .footer-text {
@@ -339,10 +397,17 @@
             sans-serif;
             letter-spacing: 0.06px;
         }
+        .spacer-x, .spacer-lg, .spacer-md {
+            height: 24px;
+            line-height: 24px;
+        }
+
+        .spacer-xs {
+            height: 20px;
+            line-height: 20px;
+        }
     }
 
-    /* Email-specific compatibility fixes */
-    
     /* Force table layout for better email client support */
     table {
         border-collapse: collapse;
@@ -436,30 +501,7 @@
         font-weight: 400 !important;
     }
 
-    .signature {
-        font-weight: 400;
-        font-style: italic;
-        font-size: 16px;
-        line-height: 28px;
-        letter-spacing: 0%;
-    }
-    
-    /* Email-specific spacing utilities */
-    .spacer {
-        height: 24px;
-        line-height: 24px;
-        font-size: 1px;
-    }
-    
-    .spacer-42 {
-        height: 42px;
-        line-height: 42px;
-        font-size: 1px;
-    }
-    
-    .spacer-64 {
-        height: 64px;
-        line-height: 64px;
-        font-size: 1px;
+    .u-block {
+        display: block;
     }
 </style>

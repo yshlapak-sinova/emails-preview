@@ -1,0 +1,9 @@
+{
+  "LOGO_URL": "/static/images/logo.png",
+  "VERIFY_LINK": "https://tumbleweed.com/verify",
+  "MAIL_LINK": "https://tumbleweed.com/mail",
+  "TERMS_LINK": "https://tumbleweed.com/terms",
+  "PRIVACY_LINK": "https://tumbleweed.com/privacy",
+  "UNSUBSCRIBE_LINK": "https://tumbleweed.com/unsubscribe",
+  "MAIL_TO": "mail@tumbleweed.com"
+} 

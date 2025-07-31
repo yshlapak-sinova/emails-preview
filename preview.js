@@ -21,7 +21,7 @@ chokidar
   .watch([
     path.join(__dirname, 'templates'),
     path.join(__dirname, 'templates/**/*.hbs'),
-    path.join(__dirname, 'data.json'),
+    path.join(__dirname, 'resources/**/*.json'),
     path.join(__dirname, 'resources/**/*'),
   ])
   .on('change', (filePath) => {
@@ -77,11 +77,26 @@ app.get('/:template', (req, res) => {
 
   let context = {};
   try {
-    context = JSON.parse(
-      fs.readFileSync(path.join(__dirname, 'resources/data.json'), 'utf8')
+    // Try to load template-specific data file
+    const dataFilePath = path.join(
+      __dirname,
+      'resources',
+      `data/${templateName}.data.json`
     );
-  } catch {
-    return res.status(500).send('Error reading data.json');
+    if (fs.existsSync(dataFilePath)) {
+      context = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
+    } else {
+      // Fallback to main data.json if template-specific file doesn't exist
+      context = JSON.parse(
+        fs.readFileSync(
+          path.join(__dirname, 'resources/data/data.json'),
+          'utf8'
+        )
+      );
+    }
+  } catch (error) {
+    console.error('Error reading data file:', error);
+    return res.status(500).send('Error reading data file');
   }
 
   res.render(templateName, context);

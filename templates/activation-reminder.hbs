@@ -3,7 +3,7 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <title>Confirm Your Email</title>
+    <title>Account Activation Reminder</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -16,100 +16,77 @@
   {{> styles}}
   </head>
   <body>
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 798px; margin: 20px auto; background: #ffffff; border-radius: 40px; box-shadow: 2px 0px 14px rgba(109, 109, 109, 0.17); overflow: hidden;">
-      <tr>
-        <td style="padding: 44px 44px 0 44px;">
-          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 710px;">
-            <tr>
-              <td style="text-align: center;">
-                {{> logo}}
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="42" style="font-size: 1px; line-height: 42px;">&nbsp;</td>
-            </tr>
-            
-            <!-- Main Content -->
-            <tr>
-              <td style="text-align: left;">
-                <div class='h1'>
-                    Account Activation Reminder
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: left;">
-                <div class='body-text'>
-                    Hi {{NAME}}, <br /> 
-                    Welcome to Tumbleweed! To get started, please activate your account by clicking the button below:
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: center;">
-                <a href='{{ACTIVATE_LINK}}' class='button button-primary' style="display: inline-block; padding: 8px 16px; text-decoration: none; text-align: center; font-size: 14px; font-weight: 600; line-height: 24px; letter-spacing: -0.5%; width: 240px; height: 40px; background: #F28C28; color: #ffffff; border-radius: 6px;">
-                    Activate My Account
-                </a>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: left;">
-                <div class='body-text'>
-                    If you didn't create this account, please ignore this email.
-                </div>
-              </td>
-            </tr>
-            
-            <!-- Spacer -->
-            <tr>
-              <td height="24" style="font-size: 1px; line-height: 24px;">&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td style="text-align: left;">
-                <div class='body-text'>
-                    We look forward to helping you grow! <br />
-                    <span class='signature'>
-                        — The Tumbleweed Team
-                    </span>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-            
-      <!-- Spacer -->
-      <tr>
-        <td height="64" style="font-size: 1px; line-height: 64px;">&nbsp;</td>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" class="email-container">
+      <!-- Logo Section -->
+      {{> logo}}
+      
+      
+      <tr class="spacer-lg">
+        <td>&nbsp;</td>
       </tr>
       
-      <!-- Footer -->
-      <tr>
-        <td style="padding: 0;">
-          {{> footer3}}
+      <!-- Main Content -->
+      <tr class="content-wrapper">
+        <td class="h1">
+          Account Activation Reminder
         </td>
       </tr>
+      
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+          <td class='body-text'>
+              Hi {{NAME}}, <br /> 
+              Welcome to Tumbleweed! To get started, please activate your account by clicking the button below:
+          </td>
+      </tr>
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class="u-block">
+          <a href='{{ACTIVATE_LINK}}' class='button button-primary'>
+              Activate My Account
+          </a>
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class='body-text'>
+              If you didn't create this account, please ignore this email.
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-sm">
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr class="content-wrapper">
+        <td class='body-text'>
+          We look forward to helping you grow! <br />
+          <span class='signature'>
+              — The Tumbleweed Team
+          </span>
+        </td>
+      </tr>
+      
+      
+      <tr class="spacer-xl">
+        <td>&nbsp;</td>
+      </tr>
+      
+      {{> footers/activation-reminder-footer}}
 
     </table>
   </body>

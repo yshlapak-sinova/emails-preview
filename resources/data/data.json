@@ -1,7 +1,5 @@
 {
   "LOGO_URL": "/static/images/logo.png",
-  "name": "John Doe",
-  "email": "john.doe@example.com",
   "code": "123456",
   "VERIFY_LINK": "https://tumbleweed.com/verify",
   "MAIL_LINK": "https://tumbleweed.com/mail",
@@ -12,7 +10,7 @@
   "SUPPORT_LINK": "https://tumbleweed.com/support",
   "ACTIVATE_LINK": "https://tumbleweed.com/activate",
   "NAME": "Cody",
-  "TUTORIALS_LINK": "https://tumbleweed.com/tutorials",
   "CUSTOMER_SUPPORT_LINK": "https://tumbleweed.com/customer-support",
-  "MANAGE_ACCOUNT_LINK": "https://tumbleweed.com/manage-account"
+  "MANAGE_ACCOUNT_LINK": "https://tumbleweed.com/manage-account",
+  "FAQ_LINK": "https://tumbleweed.com/faq"
 }
